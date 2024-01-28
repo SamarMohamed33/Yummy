@@ -1,9 +1,9 @@
 let navOpened = false;
-// $(function () {
-//   $(".loader").fadeOut(500, function () {
-//     $("body").css("overflow", "auto");
-//   });
-// });
+$(function () {
+  $(".loader").fadeOut(500, function () {
+    $("body").css("overflow", "auto");
+  });
+});
 $("#menu-icon").on("click", function () {
   let navWidth = $(".nav-container").outerWidth();
   if (navOpened === false) {
