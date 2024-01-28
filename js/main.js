@@ -233,7 +233,7 @@ async function getAreas() {
   $("nav").animate({ left: -$(".nav-container").outerWidth() });
   $(".loader").fadeIn(500);
   let response = await fetch(
-    "http://www.themealdb.com/api/json/v1/1/list.php?a=list"
+    "https://www.themealdb.com/api/json/v1/1/list.php?a=list"
   );
   let result = await response.json();
   displayAreas(result.meals);
