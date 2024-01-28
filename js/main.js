@@ -60,7 +60,7 @@ function displayMeals(data) {
             class="w-100 rounded-3"
             alt="" />
           <div class="image-overlay rounded-3 d-flex justify-content-center align-items-center fw-bolder fs-2">
-            <p class="text-dark">${data[i].strMeal}</p>
+            <p class="text-dark p-1">${data[i].strMeal}</p>
           </div>
         </div>
       </div>
