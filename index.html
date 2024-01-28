@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/logo.png" />
+    <title>Yummy</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <span class="loader"></span>
+    <nav class="nav position-fixed d-flex flex-nowrap">
+      <div
+        class="nav-container p-3 d-flex flex-column justify-content-between text-white"
+      >
+        <ul class="list-unstyled">
+          <li onclick="search()">Search</li>
+          <li onclick="getCategories()">Categories</li>
+          <li onclick="getAreas()">Area</li>
+          <li onclick="getIngredients()">Ingredients</li>
+          <li onclick="contactUs()">Contact Us</li>
+        </ul>
+        <div>
+          <div>
+            <i class="fa-solid fa-globe me-2"></i
+            ><i class="fa-brands fa-facebook me-2"></i
+            ><i class="fa-brands fa-twitter me-2"></i>
+            <p>Copyright Â© 2019 All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="nav-icon bg-white d-flex flex-column justify-content-between align-items-center py-3"
+      >
+        <img src="images/logo.png" class="w-75" alt="" />
+        <i class="fa-solid fa-bars d-inline-block p-2 fs-4" id="menu-icon"></i>
+        <div class="d-flex flex-column align-items-center">
+          <i class="fa-solid fa-share-nodes p-1"></i
+          ><i class="fa-solid fa-globe p-1"></i>
+        </div>
+      </div>
+    </nav>
+    <main class="bg-dark mh-100 text-white">
+      <div class="container py-5">
+        <div class="row items gy-4"></div>
+      </div>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

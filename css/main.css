@@ -1,0 +1,142 @@
+/************* Global Start ***************/
+body {
+  overflow: hidden;
+}
+.container {
+  min-height: 100vh;
+}
+i {
+  cursor: pointer;
+}
+/************* Global End ***************/
+
+/************* Nav Start ***************/
+nav {
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  z-index: 1000;
+}
+nav .nav-container {
+  background: #000;
+  width: 300px;
+
+  position: relative;
+  left: 0;
+}
+nav .nav-icon {
+  width: 70px;
+}
+#menu-icon {
+  cursor: pointer;
+}
+.nav-container ul li {
+  position: relative;
+  top: 150px;
+  color: white;
+  padding: 20px 10px 0 0;
+  cursor: pointer;
+}
+.nav-container ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background-color: white;
+  transition: 0.5s all;
+}
+.nav-container ul li:hover::after {
+  width: 90px;
+}
+/************* Nav End ***************/
+
+/*********************** Home Start ***************************/
+.item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.item:hover .image-overlay {
+  top: 0px;
+}
+.image-overlay {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  transition: 0.5s all;
+}
+.error {
+  display: none;
+}
+/*********************** Home End ***************************/
+
+/************ Load Start *********/
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  z-index: 10000;
+  /* display: none; */
+}
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 48em;
+  height: 48em;
+  background-image: radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0);
+  background-position: 0em -18em, 0em 18em, 18em 0em, -18em 0em, 13em -13em,
+    -13em -13em, 13em 13em, -13em 13em;
+  background-repeat: no-repeat;
+  font-size: 0.5px;
+  border-radius: 50%;
+  animation: blast 1s ease-in infinite;
+}
+.loader::after {
+  font-size: 1px;
+  background: #fff;
+  animation: bounce 1s ease-in infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    font-size: 0.75px;
+  }
+  50% {
+    font-size: 1.5px;
+  }
+}
+@keyframes blast {
+  0%,
+  40% {
+    font-size: 0.5px;
+  }
+  70% {
+    opacity: 1;
+    font-size: 4px;
+  }
+  100% {
+    font-size: 6px;
+    opacity: 0;
+  }
+}
+/************ Load End *********/
